@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
+import { api } from "../api/client.js";
 
 export default function LoginPage() {
   const { signIn } = useAuth();
@@ -16,7 +17,13 @@ export default function LoginPage() {
     setError("");
     try {
       await signIn(form);
-      navigate("/dashboard");
+      const { role } = await api.auth.me();
+      if (role === "admin") {
+        navigate("/admin");
+      } else{
+        navigate("/dashboard");
+      }
+
     } catch (err) {
       setError(err.message || "Couldn't log in. Check your email and password.");
     } finally {

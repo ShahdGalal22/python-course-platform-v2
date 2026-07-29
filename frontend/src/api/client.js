@@ -36,6 +36,11 @@ async function request(path, { method = "GET", body } = {}) {
 }
 
 export const api = {
+
+  auth: {
+    me: () => request("/auth/me")
+  },
+
   redeemCode: (lessonId, code) => request("/access/redeem", { method: "POST", body: { lessonId, code } }),
   getUnlocked: () => request("/access/unlocked"),
 
