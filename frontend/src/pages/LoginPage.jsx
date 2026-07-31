@@ -17,12 +17,17 @@ export default function LoginPage() {
     setError("");
     try {
       await signIn(form);
-      const { role } = await api.auth.me();
-      if (role === "admin") {
-        navigate("/admin");
-      } else{
-        navigate("/dashboard");
-      }
+
+        const result = await api.auth.me();
+        console.log("ME:", result);
+        
+        const { role } = result;
+
+        if (role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/dashboard");
+        }
 
     } catch (err) {
       setError(err.message || "Couldn't log in. Check your email and password.");
