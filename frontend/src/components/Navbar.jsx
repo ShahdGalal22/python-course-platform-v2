@@ -40,9 +40,9 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="btn-secondary py-2 px-4 text-sm">Login</Link>
-              <Link to="/register" className="btn-primary py-2 px-4 text-sm">Register</Link>
-            </>
+              <Link  to="/login"  target="_blank"  rel="noopener noreferrer"  className="btn-secondary py-2 px-4 text-sm"> Login </Link>
+              <Link  to="/register"  target="_blank"  rel="noopener noreferrer"  className="btn-primary py-2 px-4 text-sm">  Register</Link>     
+               </>
           )}
         </div>
 
@@ -70,8 +70,8 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="btn-secondary w-full" onClick={() => setOpen(false)}>Login</Link>
-              <Link to="/register" className="btn-primary w-full" onClick={() => setOpen(false)}>Register</Link>
+              <Link  to="/login"  target="_blank"  rel="noopener noreferrer"  className="btn-secondary w-full"  onClick={() => setOpen(false)}>  Login</Link>
+              <a  href="/login"  target="_blank"  rel="noopener noreferrer"  className="btn-secondary py-2 px-4 text-sm">  Login</a>
             </>
           )}
         </div>

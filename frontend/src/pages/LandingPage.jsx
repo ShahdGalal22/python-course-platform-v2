@@ -43,7 +43,9 @@ export default function LandingPage() {
           Learn Python step by step through simple explanations and practical coding.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link to="/register" className="btn-primary w-full sm:w-auto px-8">Start learning </Link>
+          <Link to="/register"target="_blank"rel="noopener noreferrer"className="btn-primary w-full sm:w-auto px-8">
+  Start learning
+</Link>
           <a href="#course" className="btn-secondary w-full sm:w-auto px-8">See the curriculum</a>
         </div>
       </section>
@@ -137,7 +139,9 @@ export default function LandingPage() {
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
               Pay via InstaPay, then receive your access codes on WhatsApp.
             </p>
-            <Link to="/register" className="btn-primary w-full">Register to get started</Link>
+            <Link to="/register"target="_blank"  rel="noopener noreferrer"  className="btn-primary w-full">
+  Register to get started
+</Link>
           </div>
         </div>
       </section>
